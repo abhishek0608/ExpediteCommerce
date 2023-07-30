@@ -1,0 +1,163 @@
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    padding-left: 1rem;
+    display: block;
+    overflow-x: scroll;
+  }
+  .headersection{
+    width: 100%;
+    height: 60px;
+    background-color: #0a0a0a;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.03);
+    display: flex;
+  }
+  .backImageCSS{
+    position: relative;
+    left : 15px;
+    padding-top:20px;
+  }
+  .imagelogo{
+    position: relative;
+    padding-top:20px;
+  }
+  .lineUrl{
+    position: relative;
+    left : -15px;
+    fill: #414141;
+    transform: rotate(90deg);
+  }
+  .forecastingtext{
+    padding-left:14px;
+    position : relative;
+    padding-top:20px;
+    font-family: Montserrat;
+    font-size: 13px;
+    color: #acacac;
+    text-decoration: none solid rgb(172, 172, 172);
+  }
+  .Opportunitytext{
+    padding-left:10px;
+    display: inline;
+    position : relative;
+    padding-top:18px;
+    font-family: Montserrat;
+    font-size: 16px;
+    color: #ffffff;
+    text-decoration: none solid rgb(255, 255, 255);
+  }
+  
+  .MainSection{
+    height: 6rem;
+  }
+  .MainSectionTitle{
+    height: 23px;
+    font-family: Montserrat;
+    font-size: 19px;
+    color: #0a0a0a;
+    text-decoration: none solid rgb(10, 10, 10);
+    font-weight: bold;
+  }
+  .stickyCss {
+    position: sticky !important;
+    left: 0px;
+    z-index: 1;
+    background-color: white;
+  }
+
+  .backgroundcolorgrey{
+    background-color: white;
+    height: 89px;
+  }
+
+  .tableBorder{
+    background-color: #f8f8f8;
+    height: 60px;
+  }
+  .ForecastName{
+    padding-left:30px;
+    padding-top:33px;
+    font-family: Montserrat;
+    font-size: 19px;
+    font-weight: bold;
+    color: #0a0a0a;
+    text-decoration: none solid rgb(10, 10, 10);
+  }
+
+  tr[data-label="Summary"] {
+    background-color: #f8f8f8;
+    font-weight:bold;
+  }
+
+  tr[data-label="Summary"] .stickyCss{
+    background-color: #f8f8f8;
+    
+  }
+
+  tr th,td div{
+    font-family: Roboto;
+    font-size: 13px;
+    color: #5f5f5f;
+    text-decoration: none solid rgb(95, 95, 95);
+    line-height: 40px;
+  }
+  thead tr th{
+    border-bottom:2px solid #c3eb5b;
+    min-width: 150px;
+  }
+
+  thead tr th div{
+    color: #0a0a0a;
+    text-decoration: none solid rgb(10, 10, 10);
+  }
+
+  .dropbtn {
+    margin-top: 15px;
+    width: 112px;
+    height: 34px;
+    border-radius: 3px;
+    background-color: #acacac;
+    font-family: Poppins;
+    font-size: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  .ViewButton{
+    padding-top:8px;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    right: 15px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    right : 0px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .DisplayNone{
+    display: none;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #676767;}

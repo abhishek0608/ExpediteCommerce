@@ -1,0 +1,129 @@
+<template>
+    <div>
+        <div class="headersection">
+            <span class="backImageCSS">
+                <img src={backImageUrl}>
+            </span>
+            <span class="lineUrl">
+                <img src={lineUrl}>
+            </span>
+            <span class="imagelogo">
+                <img src={imageUrl}>
+            </span>
+            <span class="forecastingtext">
+                <p>
+                    Forecasting:
+                </p>
+            </span>
+            <span class="Opportunitytext">
+                <p>
+                    Opportunity Name
+                </p>
+            </span>
+        </div>
+        <div class="backgroundcolorgrey">
+            <p class="ForecastName">
+                Forecast Name
+            </p>
+        </div>
+        <div class="tableBorder">
+            <div class="dropdown">
+                <div class="dropbtn">
+                    <p class="ViewButton">
+                        VIEW
+                    </p>
+                    <lightning-icon icon-name="action:down" ></lightning-icon>
+                </div>
+                <div class="dropdown-content">
+                <a href="#">Show full attributes</a>
+                <a href="#" onclick={HandleSummaryClick}>Show monthly summary</a>
+                </div>
+            </div>
+        
+        </div>
+        <div>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered table" aria-label="Example default base table of Opportunities">
+            <thead>
+              <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Product">Product</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Option">Option</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Attribute">Attribute</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Revenue Type">Revenue Type</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="QTY">QTY</div>
+                </th>
+                <th class="" scope="col">
+                  <div class="slds-truncate" title="Unit Price">Unit Price</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Start Month">Start Month</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Months">Months</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Revenue Recognition">Revenue Recognition</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Committed">Committed</div>
+                </th>
+                <template for:each={flexiHeader} for:item="header">
+                    <th class="" scope="col" key={header}>
+                        <div class="slds-truncate" title={header}>{header}</div>
+                    </th>
+                </template>
+            </tr>
+            </thead>
+            <tbody>
+                <template for:each={lineItemData} for:item="lineitems">
+                    <tr class="slds-hint-parent" data-label={lineitems.productId} key={lineitems.productFLIId}>
+                        <th class="stickyCss" data-label="Product" scope="row">
+                            <div class="slds-truncate">{lineitems.productItemName}</div>
+                        </th>
+                        <td data-label="Option">
+                            <div class="slds-truncate">{lineitems.optionItemName}</div>
+                        </td>
+                          <td data-label="Attribute">
+                            <div class="slds-truncate">{lineitems.attributes}</div>
+                          </td>
+                          <td data-label="Revenue Type">
+                            <div class="slds-truncate">{lineitems.revenueType}</div>
+                          </td>
+                          <td data-label="QTY">
+                            <div class="slds-truncate">{lineitems.qty}</div>
+                          </td>
+                          <td data-label="Unit Price">
+                            <div class="slds-truncate">{lineitems.unitPrice}</div>
+                          </td>
+                          <td data-label="Start Month">
+                            <div class="slds-truncate">{lineitems.startMonth}</div>
+                          </td>
+                          <td data-label="Months">
+                            <div class="slds-truncate">{lineitems.months}</div>
+                          </td>
+                          <td data-label="Revenue Recognition">
+                            <div class="slds-truncate">{lineitems.revenueRecognitionName}</div>
+                          </td>
+                          <td data-label="Committed">
+                            <div class="slds-truncate">{lineitems.committed}</div>
+                          </td>
+                          <template for:each={lineitems.renderData} for:item="summary">
+                            <td data-label="Committed" key={summary}>
+                                <div class="slds-truncate">{summary.amount}</div>
+                            </td>
+                        </template>
+                    </tr>
+                </template>
+            </tbody>
+            </table>
+        </div>
+    </div>
+ </template>
